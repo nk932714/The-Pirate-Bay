@@ -81,7 +81,7 @@ $orderby ="99";
 <!DOCTYPE html>
 <html>
 <head>
-<title>The P_bay</title>
+<title>The Pirate bay</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- below for popup details -->
@@ -106,6 +106,7 @@ function rmAll() { document.forms['q'].elements['all'].checked = false; }
 </script>
 </head>
 <body>
+<center><h1> The Pirate bay</h1>
 <form method="get" id="q" action="">
 
             <input type="search" title="Pirate Search" name="q" required placeholder="Search here..." value="<?php echo $placeholder; ?>" style="background-color:#ffffe0;" class="searchBox" /><input value="Pirate Search" type="submit" class="submitbutton"  />  <br />
@@ -113,7 +114,7 @@ function rmAll() { document.forms['q'].elements['all'].checked = false; }
             <label for="video" title="Video"><input id="video" name="video" onclick="javascript:rmAll();" type="checkbox"/>Video</label>
             <label for="apps" title="Applications"><input id="apps" name="apps" onclick="javascript:rmAll();" type="checkbox"/>Applications</label>
             <label for="games" title="Games"><input id="games" name="games" onclick="javascript:rmAll();" type="checkbox"/>Games</label>
-            <label for="porn" title="Porn"><input id="porn" name="porn" onclick="javascript:rmAll();" type="checkbox"/>Po</label>
+            <label for="porn" title="Porn"><input id="porn" name="porn" onclick="javascript:rmAll();" type="checkbox"/>Porn</label>
             <label for="other" title="Other"><input id="other" name="other" onclick="javascript:rmAll();" type="checkbox"/>Other</label>
 
             <select id="category" name="category" onchange="javascript:setAll();">
@@ -181,7 +182,7 @@ function rmAll() { document.forms['q'].elements['all'].checked = false; }
         </form>
         <input type="button" onclick="window.location.href = '<?php echo $php_link; ?>';" value="Refresh"/> 
         <input type="button" onclick="window.location.href = '<?php echo $string_pre; ?>';" value="Previous Page"/> 
-        <input type="button" onclick="window.location.href = '<?php echo $string_next; ?>';" value="Next Page"/> 
+        <input type="button" onclick="window.location.href = '<?php echo $string_next; ?>';" value="Next Page"/> </center>
         
 <table class="rwd-table">
   <tr>
@@ -212,11 +213,11 @@ function rmAll() { document.forms['q'].elements['all'].checked = false; }
     
                 echo "<tr> <td data-th='SN'>".$sn."</td> <td data-th='Name'><p onclick=".$magnet1.">".$result2[$x]['title']."</p>";
                 echo $start.$info.$end;
-                echo"<i class='fa' style='font-size:24px;color:red'>&#9432;</i></a>"; //info
+                echo"<i class='fa' style='font-size:24px;color:red'>&#9432;</i></a>&emsp;"; //info
                 echo $start.$files.$end;
-                echo"<i class='fa' style='font-size:24px;color:red'>&#xf15c;</i></a>"; //files logo
+                echo"<i class='fa' style='font-size:24px;color:red'>&#xf15c;</i></a>&emsp;"; //files logo
                 echo $start.$comments.$end;
-                echo"<i class='fa fa-comments-o' style='font-size:24px;color:red'></i></a>"; //comments logo
+                echo"<i class='fa fa-comments-o' style='font-size:24px;color:red'></i></a>&emsp;"; //comments logo
                 echo $magnet;
                 echo"<i class='fa fa-download' style='font-size:24px;color:red'></i></a></td>"; //download logo
                 echo"<td data-th='Size'>".$result2[$x]['size']."</td> <td data-th='Seeds'>".$result2[$x]['seeders']."</td>
@@ -237,7 +238,7 @@ function rmAll() { document.forms['q'].elements['all'].checked = false; }
       </div>
 
       <div class="modal-body" style="padding-top:10px; padding-left:5px; padding-right:0px; padding-bottom:0px;">
-      <iframe src="" frameborder="0" id="targetiframe" class="iframe-placeholder" style=" height:500px; width:100%;" name="targetframe" allowtransparency="true"></iframe> <!-- target iframe -->
+      <iframe src="loading.gif" frameborder="0" id="targetiframe" class="iframe-placeholder" style=" height:500px; width:100%;" name="targetframe" allowtransparency="true"></iframe> <!-- target iframe -->
       </div> <!--modal-body-->
       
       <div class="modal-footer" style="margin-top:0px;">
@@ -248,9 +249,9 @@ function rmAll() { document.forms['q'].elements['all'].checked = false; }
   </div>
 </div>
 <!-- popup work end here-->
-        <input type="button" onclick="window.location.href = '<?php echo $php_link; ?>';" value="Refresh"/> 
-        <input type="button" onclick="window.location.href = '<?php echo $string_pre; ?>';" value="Previous Page"/> 
-        <input type="button" onclick="window.location.href = '<?php echo $string_next; ?>';" value="Next Page"/> 
+        <center><input type="button" onclick="window.location.href = '<?php echo $php_link; ?>';" value="Refresh"/> 
+                <input type="button" onclick="window.location.href = '<?php echo $string_pre; ?>';" value="Previous Page"/> 
+                <input type="button" onclick="window.location.href = '<?php echo $string_next; ?>';" value="Next Page"/> <center>
 <!-- popup script -->
 <script>
 function loadiframe(htmlHref) //load iframe src location
@@ -264,6 +265,8 @@ function unloadiframe() //removes the Old frame data
         var frame = document.getElementById("targetiframe"),
         frameDoc = frame.contentDocument || frame.contentWindow.document;
         frameDoc.removeChild(frameDoc.documentElement);
+        //load the loading gif again if the user clicks again
+        document.getElementById('targetiframe').src = "loading.gif";
     }
 </script>
 <!-- magnet popoup -->
