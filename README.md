@@ -9,15 +9,15 @@ Just download and upload the code to your site and it will be working there.
 ```php 5```
 ***
 ## Installation 
-####Heroku (free) (Adding SOON)
+####Heroku (free) (Working fine on heroku)
 1. Sign up for a free [Heroku](https://heroku.com) account
-2. **Click this Deploy button** and fill in the variables you've considered above <br>
+2. **Click this Deploy button** <br>
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 3. give the name to your app.
 4. wait till deployment finised.
 5. now open <your app name>.herokuapp.com  ( example:- http://example.herokuapp.com )
 6. Enjoy ad-free version of yify.
-###NOTE : not tested  on heroku yet.
+###NOTE : Simplest way to use.
  ***
  #### 000web (free)(99.8% uptime) (recommended because of uptime)
  1. sign up for a free account at [000webhost](https://www.000webhost.com/1142879.html)
